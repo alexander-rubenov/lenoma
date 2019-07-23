@@ -869,12 +869,16 @@ a {
 }
  
 .page-main {
-    height: 1000px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .slider {
-    max-width: 1440px;
-    margin: 0 auto;
+    margin-bottom: 60px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 30px;
+    }
 }
 
 .slider__content {
@@ -944,6 +948,10 @@ a {
     font-size: 0.7rem;
     font-family: 'Circe Extra Bold', sans-serif;
     position: relative;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 0;
+    }
 }
 
 .slider__button-more:hover {
@@ -1118,3 +1126,112 @@ a {
     color: @pink;
 }
 
+.advantage {
+    padding: 0 70px;
+
+    @media (max-width: 1024px) {
+        padding: 0 35px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 17.5px;
+    }
+}
+
+.advantage__sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 760px) {
+        flex-direction: column;
+    }
+}
+
+.advantage__section {
+    font-family: 'Circe Bold', sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    position: relative;
+    text-transform: uppercase;
+    margin-left: 110px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+
+    @media (max-width: 880px) {
+        margin-left: 70px;
+    }
+}
+
+.advantage__section:nth-of-type(1) {
+    @media (max-width: 1300px) {
+        margin-right: 0;
+    }
+}
+
+.advantage__section:nth-of-type(2) {
+    @media (max-width: 1300px) {
+        margin-right: 28%;
+    }
+
+    @media (max-width: 760px) {
+        margin-left: 28%;
+        margin-right: 0;
+    }
+}
+
+.advantage__section:nth-of-type(3) {
+    @media (max-width: 1300px) {
+        margin-left: 25%;
+    }
+
+    @media (max-width: 760px) {
+        margin-left: 50%;
+    }
+}
+
+.advantage__section:nth-of-type(4) {
+    @media (max-width: 760px) and (min-width: 481px) {
+        align-self: flex-end;
+    }
+}
+
+.advantage__section:last-of-type {
+    margin-right: 0;
+}
+
+.advantage__section::before {
+    content: '';
+    position: absolute;
+    
+    width: 80px;
+    height: 1.5px;
+    background-color: #eceaed;
+    top: 7.5px;
+    left: -110px;
+
+    @media (max-width: 880px) {
+        width: 40px;
+        left: -70px;
+    }
+}
+
+.advantage__sections .advantage__section {
+    @media (max-width: 480px) {
+        margin: 0;
+        margin-left: 90px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 330px) {
+        margin-left: 70px;
+    }
+}
+
+.space { // свободное пространство снизу
+    height: 1000px;
+}
