@@ -1319,10 +1319,31 @@ a {
     justify-content: space-between;
     align-items: center;
     border-right: 1px solid #eceaed;
-    padding: 0 2.5px;
-    
+    padding: 0 5px;
+    position: relative;
+}
+
+.carousel-list-of-items__sale-plate {
+    width: 15%;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @pink;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 730px) {
+        width: 20%;
+    }
+
     @media (max-width: 480px) {
-        // width: 13%;
+        height: 28px;
     }
 }
 
@@ -1408,6 +1429,16 @@ a {
 .carousel-list-of-items__button-next {
     width: 40px;
     height: auto;
+}
+
+.hit-sales,
+.novelties,
+.special-offers {
+    margin-bottom: 80px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 60px;
+    }
 }
 
 
