@@ -96,7 +96,15 @@ function shiftCarousel() {
     widthSectionsList = parseInt(getComputedStyle(sectionsList).width),
     widthSection = (widthSectionsList * 12.5 / 100) / 2,
     numberOfSections = 4,
-    sections = [...sectionsList.children];
+    sections = [...sectionsList.children],
+    count = 4;
+
+  if (document.documentElement.clientWidth <= 480) {
+    count = 24;
+    widthSection = widthSection / 2;
+  } else if (document.documentElement.clientWidth <= 1024) {
+    count = 8;
+  }
 
   if (target.classList.contains('carousel-list-of-items__button-prev')) {
     let buttonNext = sectionsList.parentElement.nextElementSibling.firstElementChild;
@@ -105,16 +113,16 @@ function shiftCarousel() {
     sectionsList.style.marginLeft = position + 'px';
 
     if (position === 0) target.src = 'img/carousel/left-arrow-gray.svg';
-    if ((position - widthSection * numberOfSections) >= (-widthSection * (sections.length + 4 - numberOfSections))) buttonNext.src = 'img/carousel/right-arrow-golden.svg';
+    if ((position - widthSection * numberOfSections) >= (-widthSection * (sections.length + count - numberOfSections))) buttonNext.src = 'img/carousel/right-arrow-golden.svg';
 
   } else if (target.classList.contains('carousel-list-of-items__button-next')) {
     let buttonPrev = sectionsList.parentElement.previousElementSibling.firstElementChild;
     
-    position = Math.max(position - widthSection * numberOfSections, -widthSection * (sections.length + 4 - numberOfSections));
+    position = Math.max(position - widthSection * numberOfSections, -widthSection * (sections.length + count - numberOfSections));
     sectionsList.style.marginLeft = position + 'px';
 
     if (position < 0) buttonPrev.src = 'img/carousel/left-arrow-golden.svg';
-    if ((position - widthSection * numberOfSections) < (-widthSection * (sections.length + 4 - numberOfSections))) target.src = 'img/carousel/right-arrow-gray.svg';
+    if ((position - widthSection * numberOfSections) < (-widthSection * (sections.length + count - numberOfSections))) target.src = 'img/carousel/right-arrow-gray.svg';
   
   }
 }
