@@ -1902,7 +1902,11 @@ h1, h2, h3, span {
 }
 
 .contacts__link-to-page-contacts-wrap {
-    margin-bottom: 40px;
+    display: none;
+    @media (max-width: 720px) {
+        display: block;
+        margin-bottom: 40px;
+    }
 }
 
 .contacts__link-to-page-contacts {
