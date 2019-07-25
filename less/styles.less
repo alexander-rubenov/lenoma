@@ -1245,6 +1245,7 @@ a {
 
 .sections-with-carousel {
     padding: 0 30px;
+    margin-bottom: 50px;
     
     @media (max-width: 1024px) {
         padding: 0 20px;
@@ -1259,7 +1260,8 @@ a {
     margin-bottom: 60px;
 }
 
-.carousel-list-of-items__header {
+.carousel-list-of-items__header,
+.articles-and-news__header {
     width: 27%;
     margin: 0 auto;
     text-align: center;
@@ -1550,6 +1552,93 @@ a {
     border-right: none;
 }
 
+.articles-and-news {
+    padding: 0 70px;
+
+    @media (max-width: 1024px) {
+        padding: 0 35px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 17.5px;
+    }
+}
+
+.articles-and-news__content {
+    position: relative;
+    display: flex;
+}
+
+.articles-and-news__header-wrap {
+    width: 100%;
+    position: absolute;
+    top: 35px;
+}
+
+.articles-and-news__articles,
+.articles-and-news__news {
+    width: 50%;
+    padding-top: 130px;
+}
+
+.articles-and-news__news {
+    background-color: #f9f9f9;
+}
+
+.articles-and-news__article {
+    width: 90%;
+    padding: 30px 0;
+    border-bottom: 1px solid #eceaed;
+}
+
+.articles-and-news__article:last-of-type {
+    margin-bottom: 30px;
+}
+
+.article__header,
+.new__header {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.article__date,
+.new__date {
+    display: inline-block;
+    color: @golden;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.article__text,
+.new__text {
+    opacity: 0.75;
+    font-size: 0.92rem;
+}
+
+.articles-and-news__link-to-all-articles-wrap,
+.articles-and-news__link-to-all-news-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles-and-news__link-to-all-articles,
+.articles-and-news__link-to-all-news {
+    color: @golden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: scaleX(1.1);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.articles-and-news__link-to-all-articles:hover,
+.articles-and-news__link-to-all-news:hover {
+    color: #cfad73;
+}
+
+// 
 
 .space { // свободное пространство снизу
     height: 1000px;
