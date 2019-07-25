@@ -788,6 +788,7 @@ span {
 }
 .mobile-top-menu__button-text {
   position: relative;
+  color: #c1a067;
 }
 .mobile-top-menu__button-icon {
   width: 15px;
@@ -1329,6 +1330,9 @@ span {
     height: 28px;
   }
 }
+.carousel-list-of-items__sale-plate span {
+  color: #ffffff;
+}
 .carousel-list-of-items__image-wrap {
   width: 79%;
   height: 260px;
@@ -1772,13 +1776,99 @@ span {
   padding: 60px 0;
   border-bottom: 1px solid #3f3a41;
 }
+@media (max-width: 720px) {
+  .page-footer__main-part {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.page-footer__about-company-and-catalogue-wrap {
+  width: 37.5%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .page-footer__about-company-and-catalogue-wrap {
+    width: 25%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 720px) {
+  .page-footer__about-company-and-catalogue-wrap {
+    width: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .about-company__header-wrap,
+  .catalogue__header-wrap {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 720px) {
+  .about-company__header-wrap,
+  .catalogue__header-wrap {
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .about-company__sections,
+  .catalogue__sections {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+}
+@media (max-width: 1024px) {
+  .about-company__header,
+  .catalogue__header {
+    cursor: pointer;
+    margin-right: 5%;
+  }
+}
+.page-footer__white-arrow {
+  display: none;
+  width: 15px;
+  height: 15px;
+}
+@media (max-width: 1024px) {
+  .page-footer__white-arrow {
+    display: inline-block;
+  }
+}
 .about-company__header,
 .catalogue__header,
-.subscription__header {
+.subscription__header,
+.contacts__link-to-page-contacts {
   text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 2px;
   font-size: 0.8rem;
+}
+.contacts__link-to-page-contacts-wrap {
+  margin-bottom: 40px;
+}
+.contacts__link-to-page-contacts {
+  font-weight: bold;
+}
+@media (max-width: 720px) {
+  .contacts__wrap {
+    display: none;
+  }
+}
+.about-company__header-wrap,
+.catalogue__header-wrap {
+  margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
+  .about-company__header-wrap,
+  .catalogue__header-wrap {
+    margin-bottom: 10px;
+  }
+}
+.subscription__header {
   margin-bottom: 20px;
 }
 .about-company__section-link,
@@ -1873,6 +1963,11 @@ span {
 .social-networks__subscription {
   margin-bottom: 60px;
 }
+@media (max-width: 720px) {
+  .social-networks__subscription {
+    margin-bottom: 30px;
+  }
+}
 .subscription__form {
   display: flex;
   flex-direction: column;
@@ -1946,6 +2041,13 @@ span {
   justify-content: space-between;
   padding: 40px 0;
   padding-right: 20px;
+}
+@media (max-width: 480px) {
+  .page-footer__copyright-wrap {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .page-footer__copyright,
 .page-footer__development {

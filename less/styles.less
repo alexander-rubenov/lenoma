@@ -827,6 +827,7 @@ h1, h2, h3, span {
 
 .mobile-top-menu__button-text {
     position: relative;
+    color: @golden;
 }
 
 .mobile-top-menu__button-icon {
@@ -1368,6 +1369,10 @@ h1, h2, h3, span {
     }
 }
 
+.carousel-list-of-items__sale-plate span {
+    color: #ffffff;
+}
+
 .carousel-list-of-items__image-wrap {
     width: 79%;
     height: 260px;
@@ -1822,15 +1827,104 @@ h1, h2, h3, span {
     justify-content: space-between;
     padding: 60px 0;
     border-bottom: 1px solid #3f3a41;
+
+    @media (max-width: 720px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.page-footer__about-company-and-catalogue-wrap {
+    width: 37.5%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        width: 25%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    @media (max-width: 720px) {
+        width: auto;
+    }
+}
+
+.about-company__header-wrap,
+.catalogue__header-wrap {
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width: 720px) {
+        justify-content: center;
+    }
+}
+
+.about-company__sections,
+.catalogue__sections {
+    @media (max-width: 1024px) {
+        height: 0;
+        overflow: hidden;
+        
+        transition: all 0.4s ease;
+    }
+}
+
+.about-company__header,
+.catalogue__header {
+    @media (max-width: 1024px) {
+        cursor: pointer;
+        margin-right: 5%;
+    }
+}
+
+.page-footer__white-arrow {
+    display: none;
+    width: 15px;
+    height: 15px;
+
+    @media (max-width: 1024px) {
+        display: inline-block;
+    }
 }
 
 .about-company__header,
 .catalogue__header,
-.subscription__header {
+.subscription__header,
+.contacts__link-to-page-contacts {
     text-transform: uppercase;
     color: #ffffff;
     letter-spacing: 2px;
     font-size: 0.8rem;
+}
+
+.contacts__link-to-page-contacts-wrap {
+    margin-bottom: 40px;
+}
+
+.contacts__link-to-page-contacts {
+    font-weight: bold;
+}
+
+.contacts__wrap {
+    @media(max-width: 720px) {
+        display: none;
+    }
+}
+
+.about-company__header-wrap,
+.catalogue__header-wrap {
+    margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 10px;
+    }
+}
+
+.subscription__header {
     margin-bottom: 20px;
 }
 
@@ -1942,6 +2036,10 @@ h1, h2, h3, span {
 
 .social-networks__subscription {
     margin-bottom: 60px;
+
+    @media (max-width: 720px) {
+        margin-bottom: 30px;
+    }
 }
 
 .subscription__form {
@@ -2026,6 +2124,12 @@ h1, h2, h3, span {
     justify-content: space-between;
     padding: 40px 0;
     padding-right: 20px;
+
+    @media (max-width: 480px) {
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .page-footer__copyright,

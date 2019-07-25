@@ -178,3 +178,40 @@ function shiftCarousel() {
 }
 
 sectionsThatUseCarousel.addEventListener('click', shiftCarousel);
+
+
+let
+  buttonToOpenSectionAboutCompanyInFooter = document.querySelector('.about-company__header-wrap'),
+  buttonToOpenSectionCatalogueInFooter = document.querySelector('.catalogue__header-wrap'),
+  aboutCompanySectionsList = document.querySelector('.about-company__sections'),
+  catalogueSectionsList = document.querySelector('.catalogue__sections');
+
+function openAboutCompanySectionsList() {
+  buttonToOpenSectionAboutCompanyInFooter.classList.toggle('active');
+  let arrow = buttonToOpenSectionAboutCompanyInFooter.lastElementChild;
+
+  if (buttonToOpenSectionAboutCompanyInFooter.classList.contains('active')) {
+    aboutCompanySectionsList.style.height = (document.documentElement.clientWidth <= 480) ? '210px' : '175px';
+    arrow.style.transform = 'rotate(180deg)';
+  } else {
+    aboutCompanySectionsList.style.height = '0';
+    arrow.style.transform = 'rotate(0deg)';
+  }
+}
+
+function openCatalogueSectionsList() {
+  buttonToOpenSectionCatalogueInFooter.classList.toggle('active');
+  let arrow = buttonToOpenSectionCatalogueInFooter.lastElementChild;
+
+  if (buttonToOpenSectionCatalogueInFooter.classList.contains('active')) {
+    
+    catalogueSectionsList.style.height = (document.documentElement.clientWidth <= 480) ? '210px' : '175px';
+    arrow.style.transform = 'rotate(180deg)';
+  } else {
+    catalogueSectionsList.style.height = '0';
+    arrow.style.transform = 'rotate(0deg)';
+  }
+}
+
+buttonToOpenSectionAboutCompanyInFooter.addEventListener('click', openAboutCompanySectionsList);
+buttonToOpenSectionCatalogueInFooter.addEventListener('click', openCatalogueSectionsList);
