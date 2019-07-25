@@ -1386,6 +1386,112 @@ a {
     margin-bottom: 60px;
   }
 }
+.carousel-list-of-items__top-brands-header-wrap {
+  margin-bottom: 25px;
+}
+.carousel-list-of-items__link-to-all-brands-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.carousel-list-of-items__link-to-all-brands {
+  color: #c1a067;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  transform: scaleX(1.1);
+}
+.carousel-list-of-items__link-to-all-brands:hover {
+  color: #cfad73;
+}
+.carousel-list-of-items__brand-logos-wrap {
+  padding: 0 30px;
+  margin-bottom: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+@media (max-width: 1024px) {
+  .carousel-list-of-items__brand-logos-wrap {
+    height: 50px;
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-list-of-items__brand-logos-wrap {
+    margin-bottom: 30px;
+  }
+}
+.carousel-list-of-items__brand-logos-list {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+@media (max-width: 1024) {
+  .carousel-list-of-items__brand-logos-list {
+    justify-content: flex-start;
+  }
+}
+.carousel-list-of-items__brand-logo {
+  display: inline-block;
+}
+@media (max-width: 1024px) {
+  .carousel-list-of-items__brand-logo {
+    width: 190px;
+    height: 35px;
+    margin-right: 20px;
+  }
+}
+.carousel-list-of-items__brand-logo-image {
+  width: 190px;
+  height: auto;
+}
+@media (max-width: 1360px) {
+  .carousel-list-of-items__brand-logo-image {
+    width: 150px;
+  }
+}
+@media (max-width: 1175px) {
+  .carousel-list-of-items__brand-logo-image {
+    width: 130px;
+  }
+}
+@media (max-width: 1024px) {
+  .carousel-list-of-items__brand-logo-image {
+    width: 190px;
+  }
+}
+.carousel-list-of-items__top-brands-content {
+  width: 80.693%;
+}
+.carousel-list-of-items__subsection {
+  margin-bottom: 10px;
+}
+.carousel-list-of-items__subsection-link:hover {
+  color: #c1a067;
+}
+.carousel-list-of-items__top-brands-sections {
+  width: 200%;
+}
+@media (max-width: 1024px) {
+  .carousel-list-of-items__top-brands-sections {
+    width: 340%;
+  }
+}
+@media (max-width: 800px) {
+  .carousel-list-of-items__top-brands-sections {
+    width: 500%;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-list-of-items__top-brands-sections {
+    width: 1100%;
+  }
+}
+.carousel-list-of-items__top-brands-section {
+  padding: 0;
+  border-right: none;
+}
 .space {
   height: 1000px;
 }

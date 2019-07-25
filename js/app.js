@@ -85,7 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let
   sectionsThatUseCarousel = document.querySelector('.sections-with-carousel'),
-  position = 0;
+  position = 0,
+  positionHitSales = 0,
+  positionNovelties = 0,
+  positionSpecialOffers = 0,
+  positionTopBrands = 0;
 
 function shiftCarousel() {
   let target = event.target;
@@ -97,13 +101,45 @@ function shiftCarousel() {
     widthSection = (widthSectionsList * 12.5 / 100) / 2,
     numberOfSections = 4,
     sections = [...sectionsList.children],
-    count = 4;
+    count = 4,
+    sectionName = sectionsList.parentElement.parentElement.parentElement.parentElement.classList.value;
+  
+  switch(sectionName) {
+    case 'hit-sales':
+      position = positionHitSales;
+      break;
+    case 'novelties':
+      position = positionNovelties;
+      break;
+    case 'special-offers':
+      position = positionSpecialOffers;
+      break;
+    case 'top-brands':
+      position = positionTopBrands;
+      widthSection = (widthSectionsList * 20 / 100) / 2;
+      numberOfSections = 5;
+      count = 0;
+  }
 
   if (document.documentElement.clientWidth <= 480) {
     count = 24;
     widthSection = widthSection / 2;
   } else if (document.documentElement.clientWidth <= 1024) {
     count = 8;
+  }
+
+  if ((document.documentElement.clientWidth <= 480) && (sectionName === 'top-brands')) {
+    widthSection = (widthSectionsList * 20 / 100) / 2;
+    numberOfSections = 1;
+    count = 0;
+  } else if ((document.documentElement.clientWidth <= 800) && (sectionName === 'top-brands')) {
+    count = 0;
+    widthSection = (widthSectionsList * 20 / 100) / 2;
+    numberOfSections = 2;
+  } else if ((document.documentElement.clientWidth <= 1024) && (sectionName === 'top-brands')) {
+    widthSection = (widthSectionsList * 20 / 100) / 2;
+    numberOfSections = 3;
+    count = 2;
   }
 
   if (target.classList.contains('carousel-list-of-items__button-prev')) {
@@ -124,6 +160,20 @@ function shiftCarousel() {
     if (position < 0) buttonPrev.src = 'img/carousel/left-arrow-golden.svg';
     if ((position - widthSection * numberOfSections) < (-widthSection * (sections.length + count - numberOfSections))) target.src = 'img/carousel/right-arrow-gray.svg';
   
+  }
+
+  switch(sectionName) {
+    case 'hit-sales':
+      positionHitSales = position;
+      break;
+    case 'novelties':
+      positionNovelties = position;
+      break;
+    case 'special-offers':
+      positionSpecialOffers = position;
+      break;
+    case 'top-brands':
+      positionTopBrands = position;
   }
 }
 
