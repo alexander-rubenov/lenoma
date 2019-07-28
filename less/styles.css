@@ -1092,7 +1092,7 @@ span {
 .slider__container {
   width: 1080px;
   height: 487px;
-  background: #ffffff url('../img/slider.png') no-repeat center center;
+  background: #ffffff url('../img/slider.jpg') no-repeat center center;
   position: relative;
   -webkit-transition: opacity 0.4s ease;
   -o-transition: opacity 0.4s ease;
