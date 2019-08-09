@@ -2292,6 +2292,9 @@ span {
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
+.subscription__button:hover {
+  color: #cfad73;
+}
 .social-networks__instagram-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2324,14 +2327,14 @@ span {
 }
 .social-networks__instagram {
   display: block;
-  color: #ffffff;
-}
-.social-networks__instagram {
   text-transform: uppercase;
   font-weight: bold;
   color: #ffffff;
   font-size: 0.7rem;
   letter-spacing: 1px;
+}
+.social-networks__instagram:hover {
+  color: #c1a067;
 }
 .page-footer__copyright-wrap {
   display: -webkit-box;
